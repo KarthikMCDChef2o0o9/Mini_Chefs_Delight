@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Chef's Delight - Culinary Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="main-wrapper">
+            <h1 class="brand-logo">Mini <cornerstone>Chef's</cornerstone> <span>Delight</span></h1>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="slider">
+            <div class="slide active">
+                <div class="hero-content">
+                    <h2>Savor the Flavor</h2>
+                    <p>Discover my culinary creations and order your favorite dishes</p>
+                    <a href="#gallery" class="btn">View Gallery</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="hero-content">
+                    <h2>Taste the Artistry</h2>
+                    <p>Indulge in dishes crafted with passion and precision</p>
+                    <a href="#gallery" class="btn">Explore Now</a>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="hero-content">
+                    <h2>Culinary Excellence</h2>
+                    <p>Experience flavors that tell a story</p>
+                    <a href="#contact" class="btn">Order Today</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <button class="nav-arrow up-arrow"><i class="fas fa-chevron-up"></i></button>
+            <button class="nav-arrow down-arrow"><i class="fas fa-chevron-down"></i></button>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">My Culinary Creations</h2>
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="mains">Main Courses</button>
+                <button class="filter-btn" data-filter="appetizers">Appetizers</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="specials">Specials</button>
+                <button class="filter-btn" data-filter="snacks">Snacks</button>
+                <button class="filter-btn" data-filter="drinks">Drinks</button>
+            </div>
+            <div class="gallery-grid">
+                <!-- Images will be loaded dynamically via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About The Chef</h2>
+                    <p>Hi, my name is R. Jeya Karthik. I'm just an 11-year-old boy with a burning passion for cooking and serving people.</p>
+                    <p>Each dish is prepared with the freshest ingredients and a touch of creativity that makes every meal memorable.</p>
+                    <div class="signature">Bon Appétit!</div>
+                </div>
+                <div class="about-image">
+                    <img src="images/1.jpg" alt="Chef in kitchen">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Place Your Order</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-phone"></i> +91 7010671379</p>
+                    <p><i class="fas fa-envelope"></i> ramzkarthik2014@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 4-O Marutham Coconut Grove, Vellikinar Pirivu, GN Mills, Coimbatore 641029, Tamil Nadu, India</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <form id="order-form" class="order-form">
+                    <input type="hidden" name="dish_name" id="dish_name">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="address" name="address" placeholder="Your Address" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="dish" name="dish" required>
+                            <option value="">Select a Dish</option>
+                            <!-- Options will be populated via JavaScript -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Special requests or delivery instructions"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="image-modal" class="modal">
+        <span class="close-modal">×</span>
+        <div class="modal-content">
+            <img id="modal-image" src="" alt="Enlarged food image">
+            <div class="image-details">
+                <h3 id="image-title"></h3>
+                <p id="image-description"></p>
+                <p id="image-price" class="price"></p>
+                <button class="btn order-btn">Order This Dish</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="order-confirmation" class="confirmation-modal">
+        <div class="confirmation-content">
+            <span class="close-confirmation">×</span>
+            <i class="fas fa-check-circle"></i>
+            <h3>Order Placed Successfully!</h3>
+            <p>Thank you for your order. We'll contact you shortly to confirm the details.</p>
+            <button class="btn" id="close-confirmation">OK</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Disclaimer: Can only order in Coimbatore. © 2025 Chef's Delight. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
